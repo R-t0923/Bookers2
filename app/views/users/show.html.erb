@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<%= render 'users/user_sidebar', user: current_user %>
+<%= render 'books/book_sidebar', user: @book %>
+
+
+
+
+    <div class="col-xs-9">
+      <h2>Book</h2>
+      <table class="table table-hover table-inverse">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Title</th>
+            <th>opinion</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+            <%#画像リンク（プロフィール）%>
+          </td>
+          <td>
+            <%# 本のタイトル %>
+          </td>
+          <td>
+            <%# 本の感想 %>
+          </td>
+         </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

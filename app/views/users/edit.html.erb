@@ -1,0 +1,18 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <h2>User info</h2>
+
+<%= form_for (@user) do |f| %>
+  <label for="user_name">Name</label>
+  <%= f.text_field :name  %>
+  <br><label for="user_image">Image</label>
+  <%= f.attachment_field :profile_image %>
+  <label for="user_Introduction">Introduction</label>
+  <%= f.text_area :introduction %>
+  <div class="action">
+    <%= f.submit 'Update User' %>
+  </div>
+
+<% end %>
+
+</div>
