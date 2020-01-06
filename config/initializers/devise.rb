@@ -8,7 +8,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '0819bb442dc9022d2e5feb492cae32cdfb3c2cf4b69e62674919aac1513bd296a0a1da337cf611b2ec0dcb5a5fde05ff1961f1015a609a0637089a77c6001f49'
+  # config.secret_key = 'd192098f7684c0aee07ec1899ba2589212ac8f5ee88b83e73d7196960693392e43b7d995e8534c3444e5478a162a5bca785e1e33e48d77c2aa6750a0b2957438'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -52,12 +52,12 @@ Devise.setup do |config|
   # Configure which authentication keys should be case-insensitive.
   # These keys will be downcased upon creating or modifying a user and when used
   # to authenticate or find a user. Default is :email.
-  config.case_insensitive_keys = [:email]
+  config.case_insensitive_keys = [:name]
 
   # Configure which authentication keys should have whitespace stripped.
   # These keys will have whitespace before and after removed upon creating or
   # modifying a user and when used to authenticate or find a user. Default is :email.
-  config.strip_whitespace_keys = [:email]
+  config.strip_whitespace_keys = [:name]
 
   # Tell if authentication through request.params is enabled. True by default.
   # It can be set to an array that will enable params authentication only for the
@@ -114,7 +114,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'cf65a6b5a3d657a69ed2d169bac0d263c7b1cbae7959d491ce02298d741b461c784a7eee9ba78630fd7708dbe59223066bc6254edc1626b647bd88d440604664'
+  # config.pepper = '55c3b504ac1be57e2fa0cac3102ea710940c1e12d44d4fb71d6a1f11cff9bf33f2d18d2f19219400113192e935478a15d992204954d4926802df54fd49197159'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false

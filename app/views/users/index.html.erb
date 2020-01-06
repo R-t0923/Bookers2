@@ -1,32 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<%= render 'books/user_book', user: current_user %>
-<%= render 'books/book_sidebar', user: @book %>
+<%= render 'users/user_sidebar', user: current_user %>
+<%= render 'books/book_sidebar', book: @book %>
 
 
 <div class="col-xs-9">
-      <h2>Book</h2>
+      <h2>Users</h2>
       <table class="table table-hover table-inverse">
         <thead>
           <tr>
+            <th>image</th>
+            <th>name</th>
             <th></th>
-            <th>Title</th>
-            <th>opinion</th>
             <th colspan="3"></th>
           </tr>
         </thead>
         <tbody>
-         <tr>
-          <td>
-            <%#画像リンク（プロフィール）%>
-          </td>
-          <td>
-            <%# 本のタイトル %>
-          </td>
-          <td>
-            <%# 本の感想 %>
-          </td>
-         </tr>
+          <% @users.each do |user|%>
+            <tr>
+              <td>
+                <%= attachment_image_tag user, :profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg", size: "40x40" %>
+              </td>
+              <td>
+                <%= user.name %>
+              </td>
+              <td>
+               <%= link_to "Show", user_path(user.id) %>
+              </td>
+          </tr>
+         <% end %>
         </tbody>
       </table>
     </div>
